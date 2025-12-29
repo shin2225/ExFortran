@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # データの読み込み (1行目はヘッダーなので飛ばす)
-data = np.loadtxt('result.csv', delimiter=',', skiprows=1)
+data = np.loadtxt('result.csv', skiprows=1)
 t = data[:, 0]
 x = data[:, 1]
 v = data[:, 2]
