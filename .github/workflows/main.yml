@@ -1,0 +1,15 @@
+- name: Compile and Run Fortran
+        run: |
+          gfortran main.f90 -o simulation
+          ./simulation
+
+      - name: Run Python Plotting
+        run: |
+          pip install numpy matplotlib
+          python plot.py
+
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: simulation-plot
+          path: output.png
